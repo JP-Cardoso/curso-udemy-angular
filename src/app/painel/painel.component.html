@@ -2,7 +2,8 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-6">
-        <app-progresso></app-progresso>
+        <!-- Aqui enviamos valores do componente pai para o componente filho -->
+        <app-progresso [progresso]="progresso"></app-progresso>
       </div>
       <div class="col-sm-6">
         <!-- Faz com que o elemento fique do lado direito no painel -->
@@ -14,16 +15,22 @@
     <div class="row">
       <div class="col">
         <h6>{{instrucao}}</h6>
-        <p>{{frases[0].fraseEng}}</p>
+        <p>{{rodadaFrase.fraseEng}}</p>
         <div class="form-group">
           <!-- Fazendo um event Binding -->
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" (input)="atualizaResposta($event)"></textarea>
+          <textarea class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            (input)="atualizaResposta($event )"
+            [value]="resposta"
+            >
+          </textarea>
         </div>
 
         <div class="row">
           <div class="col">
             <div class="d-flex justify-content-end">
-              <div type="button" class="btn btn-primary">Verificar</div>
+              <div type="button" class="btn btn-primary" (click)="verificarResposta()">Verificar</div>
             </div>
           </div>
         </div>

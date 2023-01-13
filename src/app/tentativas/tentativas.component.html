@@ -1,5 +1,10 @@
 <!-- Adição de componente Propery Binding -->
+<!-- <img [src]="coracaoVazio" alt="coração">
 <img [src]="coracaoVazio" alt="coração">
-<img [src]="coracaoVazio" alt="coração">
-<img [src]="coracaoVazio" alt="coração">
+<img [src]="coracaoVazio" alt="coração"> -->
 
+<!--
+  Usando a diretiva ngFor, para fazer uma interação no array de corações
+  para que o mesmo seja exibido.
+-->
+<img *ngFor="let coracao of coracoes" [src]="coracao.exibeCoracao()">
