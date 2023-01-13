@@ -1,3 +1,7 @@
-.exemplo {
-  color:royalblue;
+.navbar {
+  background-color: #1cb0f6;
+}
+
+.navbar-brand {
+  color: #FFF;
 }
