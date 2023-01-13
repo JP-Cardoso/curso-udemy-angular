@@ -9,5 +9,9 @@ import { Component } from "@angular/core";
 })
 
 export class TopoComponent {
+  // Criando um atributo
+  public titulo: string = 'Aprendendo Inglês';
+
+
 
 }
